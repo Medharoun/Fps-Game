@@ -56,9 +56,9 @@ public class PlayerController : MonoBehaviour
 
 		float xRot = Input.GetAxisRaw ("Mouse Y");
 
-		Vector3 cameraRotation = new Vector3 (xRot, 0, 0) * lookSensitivity;
+		float _cameraRotationX = xRot * lookSensitivity;
 
-		motor.rotateCamera (cameraRotation);
+		motor.rotateCamera(_cameraRotationX);
 
 		Vector3 _thrusterForce = Vector3.zero;
 
